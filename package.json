@@ -1,9 +1,8 @@
 {
   "name": "wysiflow",
   "version": "1.0.0",
-  "description": "A Vue.js project",
-  "author": "gerard-pmh",
-  "private": true,
+  "description": "A simple front-end builder",
+  "author": "Pierre Gerard",
   "scripts": {
     "dev": "node build/dev-server.js",
     "build": "node build/build.js",

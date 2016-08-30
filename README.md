@@ -1,6 +1,6 @@
 # wysiflow
 
-> A Vue.js project
+> A simple front-end builder
 
 ## Build Setup
 
