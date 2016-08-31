@@ -1,5 +1,11 @@
+<style lang="scss">
+.wysi-checkbox {
+  margin: 0.5em;
+}
+</style>
+
 <template>
-<div class="">
+<div class="wysi-checkbox">
   <input type="checkbox" v-model="content">
 </div>
 </template>

@@ -39,12 +39,12 @@ export default {
               name: 'title',
             },
           ],
-          params: {
-            vertical: true,
-          },
+          params: {},
         },
       ],
-      params: {},
+      params: {
+        container: ['vertical'],
+      },
       content: ['lala', 'lili', [false, 'le']],
     };
   },

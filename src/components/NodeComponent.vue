@@ -1,7 +1,5 @@
 <template>
-<div
-  class="wysi-node"
-  :class="{'wysi-node-vertical': params.vertical}">
+<container :params="params.container">
   <div
     v-for="node in tree"
     track-by="$index">
@@ -18,16 +16,18 @@
       :content="content[$index]">
     </leaf-component>
   </div>
-</div>
+</container>
 </template>
 
 <script>
+import Container from './Container.vue';
 import NodeComponent from './NodeComponent.vue';
 import LeafComponent from './LeafComponent.vue';
 
 export default {
   name: 'node-component',
   components: {
+    Container,
     NodeComponent,
     LeafComponent,
   },
@@ -44,14 +44,3 @@ export default {
   },
 };
 </script>
-
-<style>
-.wysi-node {
-  border-style: solid;
-  margin: 10px;
-  display: flex;
-}
-.wysi-node-vertical {
-  flex-direction: column;
-}
-</style>
