@@ -1,8 +1,13 @@
 {
   "name": "wysiflow",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "A simple front-end builder",
+  "repository": {
+    "type": "git",
+    "url" "git+https://github.com/gerard-pmh/wysiflow.git"
+  },
   "author": "Pierre Gerard",
+  "license": "MIT",
   "scripts": {
     "dev": "node build/dev-server.js",
     "build": "node build/build.js",
@@ -17,7 +22,9 @@
     "chart.js": "^2.2.2",
     "font-awesome": "^4.6.3",
     "normalize.css": "^4.2.0",
-    "vue": "^1.0.21"
+    "roboto-fontface": "^0.6.0",
+    "vue": "^1.0.21",
+    "vuex": "^1.0.0-rc.2"
   },
   "devDependencies": {
     "babel-core": "^6.0.0",

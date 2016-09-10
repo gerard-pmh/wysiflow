@@ -6,7 +6,7 @@
 
 <template>
 <div class="wysi-checkbox">
-  <input type="checkbox" v-model="content">
+  <input type="checkbox" v-model="content" :disabled="params.disabled">
 </div>
 </template>
 
@@ -15,7 +15,15 @@ export default {
   props: {
     content: {
       type: Boolean,
-      default: false,
+      default: true,
+    },
+    params: {
+      type: Object,
+      default() {
+        return {
+          disabled: false,
+        };
+      },
     },
   },
 };

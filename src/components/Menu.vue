@@ -1,13 +1,23 @@
-<style>
+<style lang="scss">
 .menu {
   min-height: 100vh;
+  user-select: none;
+  &-item {
+    zoom: 50%;
+  }
 }
 </style>
 
 <template>
 <div class="menu">
-  <div v-for="basciComponent in basicComponents" track-by="$index">
-    <leaf-component :name="basciComponent"></leaf-component>
+  <div
+    class="menu-item"
+    v-for="basciComponent in basicComponents"
+    track-by="$index">
+    <leaf-component
+      :name="basciComponent"
+      :params="params">
+    </leaf-component>
   </div>
 </div>
 </template>
@@ -22,6 +32,9 @@ export default {
   data() {
     return {
       basicComponents: ['title', 'checkbox'],
+      params: {
+        disabled: true,
+      },
     };
   },
 };

@@ -1,7 +1,7 @@
 <template>
 <div class="">
   <h1 v-if="params.size === 'large'">{{content}}</h1>
-  <h2 v-if="params.size === 'medium'">{{content}}</h2>
+  <h2 v-if="params.size === 'medium' || !params.size">{{content}}</h2>
   <h3 v-if="params.size === 'small'">{{content}}</h3>
 </div>
 </template>
