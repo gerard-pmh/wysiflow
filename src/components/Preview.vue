@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import RootComponent from './RootComponent.vue';
+import RootComponent from './tree/RootComponent.vue';
 
 export default {
   components: {

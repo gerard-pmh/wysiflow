@@ -2,39 +2,31 @@
 .menu {
   min-height: 100vh;
   user-select: none;
-  &-item {
-    zoom: 50%;
-  }
 }
 </style>
 
 <template>
 <div class="menu">
   <div
-    class="menu-item"
-    v-for="basciComponent in basicComponents"
+    v-for="name in basicComponentNames"
     track-by="$index">
-    <leaf-component
-      :name="basciComponent"
-      :params="params">
-    </leaf-component>
+    <menu-item
+      :name="name">
+    </menu-item>
   </div>
 </div>
 </template>
 
 <script>
-import LeafComponent from './LeafComponent.vue';
+import MenuItem from './MenuItem.vue';
 
 export default {
   components: {
-    LeafComponent,
+    MenuItem,
   },
   data() {
     return {
-      basicComponents: ['title', 'checkbox'],
-      params: {
-        disabled: true,
-      },
+      basicComponentNames: ['title', 'checkbox'],
     };
   },
 };

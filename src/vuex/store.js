@@ -54,11 +54,17 @@ const state = {
 };
 
 /* eslint-disable no-shadow */
+/* eslint-disable no-param-reassign */
 const mutations = {
+  SELECT_COMPONENT(state, name) {
+    state.selectedComponent = { name, dragged: true };
+  },
+  DESELECT_COMPONENT(state) {
+    state.selectedComponent.dragged = false;
+  },
   ADD_NODE(state, node) {
     state.wysiApp.push(node);
   },
-
   DELETE_NODE(state, node) {
     state.wysiApp.splice(state.wysiApp.indexOf(node), 1);
   },
