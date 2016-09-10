@@ -29,5 +29,10 @@ export default {
     Preview,
     Menu,
   },
+  vuex: {
+    getters: {
+
+    },
+  },
 };
 </script>

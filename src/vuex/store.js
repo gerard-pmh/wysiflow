@@ -11,11 +11,46 @@ if (navigator.userAgent.indexOf('PhantomJS') > -1) {
   localStorage.clear();
 }
 
-const wysiApp = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+// const wysiApp = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+const wysiApp = {
+  tree: [
+    {
+      name: 'title',
+      params: {
+        size: 'large',
+      },
+    },
+    {
+      name: 'title',
+      params: {
+        size: 'small',
+      },
+    },
+    {
+      tree: [
+        {
+          name: 'checkbox',
+        },
+        {
+          name: 'title',
+        },
+      ],
+      params: {},
+    },
+  ],
+  params: {
+    container: ['vertical'],
+  },
+  content: ['lala', 'lorem ipsum', [false, 'le']],
+};
 
 const state = {
   wysiApp,
   currentTree: [],
+  selectedComponent: {
+    name: 'title',
+    dragged: false,
+  },
 };
 
 /* eslint-disable no-shadow */

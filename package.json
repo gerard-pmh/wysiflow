@@ -4,7 +4,7 @@
   "description": "A simple front-end builder",
   "repository": {
     "type": "git",
-    "url" "git+https://github.com/gerard-pmh/wysiflow.git"
+    "url": "git+https://github.com/gerard-pmh/wysiflow.git"
   },
   "author": "Pierre Gerard",
   "license": "MIT",

@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import Container from './Container.vue';
+import Container from '../Container.vue';
 import NodeComponent from './NodeComponent.vue';
 import LeafComponent from './LeafComponent.vue';
 

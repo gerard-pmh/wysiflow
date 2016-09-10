@@ -9,9 +9,9 @@
 </template>
 
 <script>
-import WysiTitle from './basics/WysiTitle.vue';
-import WysiCheckbox from './basics/WysiCheckbox.vue';
-import WysiChart from './basics/WysiChart.vue';
+import WysiTitle from '../basics/WysiTitle.vue';
+import WysiCheckbox from '../basics/WysiCheckbox.vue';
+import WysiChart from '../basics/WysiChart.vue';
 
 export default {
   components: {
