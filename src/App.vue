@@ -17,21 +17,25 @@ body {
 <div class="app">
   <preview></preview>
   <menu></menu>
+  <dragged-component :name="selectedComponent" :is-dragged="isDragging"></dragged-component>
 </div>
 </template>
 
 <script>
 import Preview from './components/Preview.vue';
 import Menu from './components/Menu.vue';
+import DraggedComponent from './components/DraggedComponent';
 
 export default {
   components: {
     Preview,
     Menu,
+    DraggedComponent,
   },
   vuex: {
     getters: {
-
+      selectedComponent: state => state.selectedComponent,
+      isDragging: state => state.isDragging,
     },
   },
 };

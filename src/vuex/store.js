@@ -47,20 +47,22 @@ const wysiApp = {
 const state = {
   wysiApp,
   currentTree: [],
-  selectedComponent: {
-    name: 'title',
-    dragged: false,
-  },
+  selectedComponent: 'title',
+  isDragging: false,
 };
 
 /* eslint-disable no-shadow */
 /* eslint-disable no-param-reassign */
 const mutations = {
   SELECT_COMPONENT(state, name) {
-    state.selectedComponent = { name, dragged: true };
+    state.selectedComponent = name;
   },
-  DESELECT_COMPONENT(state) {
-    state.selectedComponent.dragged = false;
+  DRAG_COMPONENT(state) {
+    state.isDragging = true;
+  },
+  DROP_COMPONENT(state) {
+    state.selectedComponent = name;
+    state.isDragging = false;
   },
   ADD_NODE(state, node) {
     state.wysiApp.push(node);

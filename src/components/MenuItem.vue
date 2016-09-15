@@ -7,6 +7,7 @@
 <template>
 <div
   class="menu-item"
+  @click="selectComponent(name)"
   @mousedown="dragComponent(name)">
   <leaf-component
     :name="name"
@@ -17,7 +18,7 @@
 
 <script>
 import LeafComponent from './tree/LeafComponent.vue';
-import selectComponent from '../vuex/actions';
+import { selectComponent, dragComponent } from '../vuex/actions';
 
 export default {
   components: {
@@ -26,6 +27,7 @@ export default {
   vuex: {
     actions: {
       selectComponent,
+      dragComponent,
     },
   },
   props: {

@@ -7,11 +7,11 @@
 <template>
 <div
   class="dragged-component"
-  v-show="dragged"
-  @mouseup="deselectComponent(basicComponent)"
-  @mousemove="">
+  v-show="isDragged"
+  @mouseup="dropComponent"
+  @mousemove="moveComponent">
   <leaf-component
-    :name="basicComponent"
+    :name="name"
     :params="{ disabled: true }">
   </leaf-component>
 </div>
@@ -19,23 +19,32 @@
 
 <script>
 import LeafComponent from './tree/LeafComponent.vue';
-import deselectComponent from '../vuex/actions';
+import { dropComponent } from '../vuex/actions';
 
 export default {
   components: {
     LeafComponent,
   },
   vuex: {
-    getters: {
-
-    },
     actions: {
-      deselectComponent,
+      dropComponent,
     },
   },
   props: {
-    basicComponent: {
+    name: {
       type: String,
+    },
+    isDragged: {
+      type: Boolean,
+      default: false,
+    },
+  },
+  methods: {
+    moveComponent(event) {
+      if (this.isDragged) {
+        this.$el.style.left = event.clientX;
+        this.$el.style.top = event.clientY;
+      }
     },
   },
 };
